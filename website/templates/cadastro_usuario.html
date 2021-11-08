@@ -1,0 +1,145 @@
+{% extends "base.html" %} 
+{% block title %}
+Cadastre-se
+{% endblock %} 
+{% block content %}
+<body background="{{ url_for('static', filename='light_green.jpg') }}"> 
+
+<form method="POST">
+    <div class="form-group">
+      <label for="profissao">Seu papel (digite uma das opções abaixo de forma idêntica ao que está entre aspas):</label>
+      <input
+        type="text"
+        class="form-control"
+        id="profissao"
+        name="profissao"
+        placeholder="'Diretor(a)' ou 'Doador(a)/Professor(a)'"
+      />
+    </div>
+    <div class="form-group">
+      <label for="nome">Primeiro nome:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        name="nome"
+        placeholder="Digite seu primeiro nome"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Digite seu email:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Digite seu email"
+      />
+    </div> 
+    <div class="form-group">
+      <label for="telefone">Telefone, com código de área e apenas com números:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="telefone"
+        name="telefone"
+        placeholder="Digite seu telefone"
+      />
+    </div>
+    <div class="form-group">
+      <label for="cpf_cnpj">CPF ou CNPJ (sem pontos, apenas números):</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cpf_cnpj"
+        name="cpf_cnpj"
+        placeholder="Digite seu CPF ou CNPJ"
+      />
+    </div>
+    <div class="form-group">
+      <label for="rua">Rua:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="rua"
+        name="rua"
+        placeholder="Rua"
+      />
+    </div>
+    <div class="form-group">
+      <label for="bairro">Bairro:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="bairro"
+        name="bairro"
+        placeholder="Bairro"
+      />
+    </div>
+    <div class="form-group">
+      <label for="cidade">Cidade:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cidade"
+        name="cidade"
+        placeholder="Cidade"
+      />
+    </div>
+    <div class="form-group">
+      <label for="estado">Estado:</label>
+      <select class="form-control" id="estado" form="estado">
+        <option>AC</option>
+        <option>AL</option>
+        <option>AP</option>
+        <option>AM</option>
+        <option>BA</option>
+        <option>CE</option>
+        <option>DF</option>
+        <option>ES</option>
+        <option>GO</option>
+        <option>MA</option>
+        <option>MT</option>
+        <option>MS</option>
+        <option>MG</option>
+        <option>PA</option>
+        <option>PB</option>
+        <option>PR</option>
+        <option>PE</option>
+        <option>PI</option>
+        <option>RJ</option>
+        <option>RN</option>
+        <option>RS</option>
+        <option>RO</option>
+        <option>RR</option>
+        <option>SC</option>
+        <option>SP</option>
+        <option>SE</option>
+        <option>TO</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="senha1">Crie uma senha de no mínimo 6 caracteres:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="senha1"
+        name="senha1"
+        placeholder="Digite sua senha"
+      />
+    </div>
+    <div class="form-group">
+      <label for="senha2">Confirme sua senha:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="senha2"
+        name="senha2"
+        placeholder="Confirme sua senha"
+      />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submeter</button>
+  </form>
+{% endblock %}
+  

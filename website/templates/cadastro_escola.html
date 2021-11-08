@@ -1,0 +1,90 @@
+<!--AGORA OS DADOS ESCOLARES-->
+{% extends "base.html" %} 
+{% block title %}
+Cadastre-se
+{% endblock %} 
+{% block content %}
+<form method="POST">
+  <h3 align="center">Diretor(a), cadastre sua escola:</h3>
+  <div class="form-group">
+    <label for="nome_escola">Nome da escola:</label>
+    <input 
+      type="text" 
+      class="form-control" 
+      id="nome_escola" 
+      name="nome_escola"
+      placeholder="Digite o nome da sua escola" />
+  </div>
+  <div class="form-group">
+    <label for="email_escola">Digite o email da escola:</label>
+    <input 
+      type="email" 
+      class="form-control" 
+      id="email_escola" 
+      name="email_escola"
+      placeholder="Digite o email da sua escola" />
+  </div>
+    <div class="form-group">
+      <label for="telefone_escola">Telefone (com código de área):</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="telefone_escola" 
+        name="telefone_escola"
+        placeholder="Digite o telefone da escola" />
+    </div>
+    <div class="form-group">
+      <label for="ue_escola">Unidade Escolar:</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="ue_escola" 
+        name="ue_escola" 
+        placeholder="Digite a U.E." />
+    </div>
+    <div class="form-group">
+      <label for="rua_escola">Rua:</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="rua_escola" 
+        name="rua_escola" 
+        placeholder="Rua da escola" />
+    </div>
+    <div class="form-group">
+      <label for="bairro_escola">Bairro:</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="bairro_escola" 
+        name="bairro_escola" 
+        placeholder="Bairro da escola" />
+    </div>
+    <div class="form-group">
+      <label for="cidade_escola">Cidade:</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        id="cidade_escola" 
+        name="cidade_escola" 
+        placeholder="Cidade da escola" />
+    </div>
+    <div class="form-group">
+      <label for="estado_escola">Estado:</label>
+      <select class="form-control" id="estado_escola">
+        <option>SP</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="cnpj_escola">CNPJ:</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="cnpj_escola" 
+          name="cnpj_escola" 
+          placeholder="CNPJ da escola" />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submeter</button>
+  </form>
+{% endblock %}
