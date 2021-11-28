@@ -1,0 +1,181 @@
+{% extends "base.html" %} 
+{% block title %}
+Doador(a)/Professor(a)
+{% endblock %} 
+{% block content %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='static/home_diretor.css') }}">
+<section class="vh-100 gradient-custom">
+  <div class="container-lg py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registro de recursos - Doador(a) ou Professor(a)</h3>
+            <form>
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="recurso" class="form-control form-control-lg" />
+                    <label class="form-label" for="recurso">Recurso</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="qtde" class="form-control form-control-lg" />
+                    <label class="form-label" for="qtde">Quantidade</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+                  <div class="form-outline">
+                    <input type="text" id="materia" class="form-control form-control-lg" />
+                    <label class="form-label" for="materia">Matéria</label>
+                  </div>
+                  
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <h6 class="mb-2 pb-1">Período: </h6>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="manha"
+                      value="option1"
+                      checked
+                    />
+                    <label class="form-check-label" for="manha">Manhã</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="tarde"
+                      value="option2"
+                    />
+                    <label class="form-check-label" for="tarde">Tarde</label>
+                  </div>
+
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="noite"
+                      value="option3"
+                    />
+                    <label class="form-check-label" for="noite">Noite</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <input type="text" id="obs" class="form-control form-control-lg" />
+                    <label class="form-label" for="obs">Observações</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <!-- <div class="form-outline">
+                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                    <label class="form-label" for="phoneNumber">Phone Number</label>
+                  </div> -->
+
+                </div>
+              </div>
+
+              <!-- <div class="row">
+                <div class="col-12">
+
+                  <select class="select form-control-lg">
+                    <option value="1" disabled>Choose option</option>
+                    <option value="2">Subject 1</option>
+                    <option value="3">Subject 2</option>
+                    <option value="4">Subject 3</option>
+                  </select>
+                  <label class="form-label select-label">Choose option</label>
+
+                </div>
+              </div> -->
+              <div class="mt-4 pt-2">
+                <input class="btn btn-primary btn-lg" type="enviar" value="Incluir no mural" />
+              </div>
+            </form>
+
+
+            <!-- TABELA COMEÇA AQUI -->
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <br>
+    <br>
+    <br>
+    
+    <center><div class="card" style="width: 40rem;"></center>
+      <div class="card-header">
+        <center><h5>Mural de necessidades</h5></center>
+      </div>
+      <table class="card-table table">
+        <thead>
+          <tr>
+            <th scope="col"><center>Recurso</center></th>
+            <th scope="col"><center>Quantidade</center></th>
+            <th scope="col"><center>Matéria</center></th>
+            <th scope="col"><center>Período</center></th>
+            <th scope="col"><center>Observações</center></th>
+            <th scope="col"><center>Escola</center></th>
+            <th scope="col"><center>E-mail</center></th>
+            <th scope="col"><center>Telefone</center></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><center>Tinta</center></td>
+            <td><center>2</center></td>
+            <td><center>-</center></td>
+            <td><center>-</center></td>
+            <td><center>Galões de tinta branca</center></td>
+            <td><center>Escola fictícia 1</center></td>
+            <td><center>email_escola1@escola.com.br</center></td>
+            <td><center>1112345678</center></td>
+          </tr>
+          <tr>
+            <td><center>-</center></td>
+            <td><center>4</center></td>
+            <td><center>Matemática</center></td>
+            <td><center>Manhã</center></td>
+            <td><center>Nas quartas e quintas</center></td>
+            <td><center>Escola fictícia 2</center></td>
+            <td><center>email_escola2@escola.com.br</center></td>
+            <td><center>1112345678</center></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+
+
+
+</section>
+{% endblock %}
