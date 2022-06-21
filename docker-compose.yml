@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  website_prod:
+    platform: linux/amd64
+    container_name: website_prod
+    build:
+      context: "."
+      target: prod
+    volumes:
+      - "./app:/app"
